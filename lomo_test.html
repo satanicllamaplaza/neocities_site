@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>SatanicLlamaPlaza</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./assets/scripts/art.js" defer></script>
+  <script src="./assets/scripts/music_links.js" defer></script>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #222;
+      padding: 20px;
+      border: 1px solid #935463;
+      z-index: 1000;
+    }
+
+    .modal.active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body class="art">
+  <main>
+    <div class="container_1">
+      <div class="box" id="topbar">
+        <h1 class="logo">SatanicLlamaPlaza</h1>
+      </div>
+
+      <div class="container_2">
+        <div class="box" id="content">
+          <div id="post-container">
+            <form id="filter-form">
+              <input type="checkbox" name="filter" value="film_soup" onchange="toggleFilter(this)">
+              <label>Film Soup</label><br>
+
+              <input type="checkbox" name="filter" value="expired_film" onchange="toggleFilter(this)">
+              <label>Expired Film</label><br>
+
+              <input type="checkbox" name="filter" value="blur" onchange="toggleFilter(this)">
+              <label>Blur</label><br>
+
+              <input type="checkbox" name="filter" value="black_and_white" onchange="toggleFilter(this)">
+              <label>Black & White</label><br>
+
+              <input type="submit" value="Apply Filters">
+            </form>
+
+            <div id="modals-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const modalsContainer = document.getElementById('modals-container');
+
+    function toggleFilter(checkbox) {
+      if (checkbox.checked) {
+        createModal(checkbox.value);
+      } else {
+        removeModal(checkbox.value);
+      }
+    }
+
+    function createModal(filterName) {
+      const modal = document.createElement('div');
+      modal.className = 'modal active';
+      modal.id = `modal-${filterName}`;
+      modal.innerHTML = `
+        <h2>${filterName.replace('_', ' ')}</h2>
+        <label>Strength:</label>
+        <input type="range" min="0" max="100"><br>
+        <button onclick="removeModal('${filterName}')">Close</button>
+      `;
+      modalsContainer.appendChild(modal);
+    }
+
+    function removeModal(filterName) {
+      const modal = document.getElementById(`modal-${filterName}`);
+      if (modal) {
+        modal.remove();
+        document.querySelector(`input[value="${filterName}"]`).checked = false;
+      }
+    }
+  </script>
+</body>
+
+</html>

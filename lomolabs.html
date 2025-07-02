@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>SatanicLlamaPlaza</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./assets/scripts/art.js" defer></script>
+  <script src="./assets/scripts/music_links.js" defer></script>
+  <script src="./assets/scripts/lomo_labs.js" defer></script>
+</head>
+
+<body class="art">
+  <main>
+    <div class="container_1">
+      <!-- Topbar -->
+      <div class="box" id="topbar" style="border-color: #935463;">
+        <h1 class="logo">SatanicLlamaPlaza</h1>
+        <a href="./index.html"><img src="./assets/images/icons/tools-wizard.png" class="icon" alt="Code" /></a>
+        <a href="./bookmarks.html"><img src="./assets/images/icons/bookmark-edit.png" class="icon" alt="Code" /></a>
+        <a href="./contact.html"><img src="./assets/images/icons/emblem-mail.png" class="icon" alt="Repair" /></a>
+        <a href="./art.html"><img src="./assets/images/icons/camera.png" class="icon" alt="Art" /></a>
+      </div>
+      <div class="container_2">
+        <!-- Main content area -->
+        <div class="box" id="content" style="border-color: #935463;">
+          <div id="post-container">
+
+            <!--WARN: PAGE CONTENTS START HERE -->
+
+            <h2>Welcome to Lomo Labs</h2>
+
+
+
+            <details>
+              <summary>About the Project</summary>
+              <ul style="color: #cec090;">
+                <p>
+                  I tried to remake some of my favorite lomography effects with python code.
+                  It took me several months and while for neocities it would be easier to rebuild this in js. I
+                </p>
+              </ul>
+            </details>
+
+
+
+            <details>
+              <summary>Read the Fucking Manual</summary>
+              <ul style="color: #cec090;">
+                <p>THis is the manual</p>
+              </ul>
+            </details>
+
+
+
+            <label for="avatar" style="color: #FF6347;">Choose a profile picture:</label>
+            <br>
+            <input type="file" id="avatar" name="avatar" multiple="true" accept="image/png, image/jpeg" />
+
+            <div id="filter-options">
+              <input type="checkbox" name="filter" value="black_and_white" onclick="addFilterOptions(this)">
+              <label style="color: #FF6347;">Black & white / Fade</label><br>
+
+              <input type="checkbox" name="filter" value="expired_film" onclick="addFilterOptions(this)">
+              <label style="color: #4682B4;">Expired Film</label><br>
+
+              <input type="checkbox" name="filter" value="flip_the_brownie" onclick="addFilterOptions(this)">
+              <label style="color: #8A2BE2;">Flip the Brownie</label><br>
+
+              <input type="checkbox" name="filter" value="film_soup" onclick="addFilterOptions(this)">
+              <label style="color: #FFD700;">Film Soup</label><br>
+            </div>
+
+            <form method="POST" action="/upload" id="filter-form">
+              <input type="submit" value="Apply Filters">
+            </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <br><br><br><br><br>
+
+            <!--WARN: PAGE CONTENTS START HERE -->
+
+          </div>
+        </div>
+        <!-- Right sidebar -->
+        <div class="box" id="sidebar" style="border-color: #935463;">
+          <h2>My Recent Art Posts</h2>
+          <div id="sidebar-content">
+            <ul id="post-titles">
+              <!-- Titles will be populated by JavaScript -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="box" id="bottombar" style="border-color: #935463;">
+      <a href="https://github.com/satanicllamaplaza" target="_blank" rel="noopener noreferrer"><img
+          src="./assets/images/icons/cool-retro-term.png" class="icon" alt="Playlist" /></a>
+      <h2>Copyright is a Scam</h2>
+
+      <a href="#" onclick="openRandomLink(); return false;">
+        <img src="./assets/images/icons/audio-x-wav.png" class="icon" alt="Playlist" />
+      </a>
+
+    </div>
+  </footer>
+</body>
+
+</html>

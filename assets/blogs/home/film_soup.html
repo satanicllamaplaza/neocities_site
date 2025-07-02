@@ -1,0 +1,82 @@
+<h2>LOMOGRAPHY part 1, FILM SOUP</h2>
+<h2>11.12.2024</h2>
+<p>
+    When I was in my early 20s I became really interested in the art of lomography. It's a wildly unpredictable for of photography 
+    that uses low quality cameras, expired film, drilling holes in film canisters and even soaking unexposed film in random liquids 
+    to distort the film. It was a fun hobby that encouraged creativity without any artistic expectations causing me stress. 
+    The results were good or they were bad, nothing you can do about it. Unfortunatly it is a fairly expensive hobby. 
+    A good roll of film would yield 3 or 4 decent pictures.
+</p>
+<p>
+    These days I do not have the funds to spend a fortune on developing aweful pictures so I have started using a new methodology. 
+    Traditionally Lomography is an analog process but I got a toy that will teach me to code and create some unpredictable art. 
+    I got the 
+
+    <a href="https://www.adafruit.com/product/5420" style="color: #70807d;" target="_blank" rel="noopener noreferrer">
+        Adafruit Memento
+    </a>
+    
+    a DIY Python Programable Camera. This camera takes pretty low quality photos that I find charming. 
+</p>
+
+<img src="assets/images/art/biosphere_2_09.15.2024/biosphere1.jpg" alt="Photo of the biosphere 2" class="bio-image">
+
+<p>
+    Now taking pictures is great but I want to try and embrace the Lomo life. My first task was to create my own digital film soup. 
+    I am not a super skilled programmer so complicated algorythms arent my forte but I can make do. I learned some basic photo 
+    manipulation from CS50X and was pretty confident i could blend 2 pictures together. I payed a visit to  
+
+    <a href="https://www.flickr.com/photos/britishlibrary/albums" style="color: #70807d;" target="_blank" rel="noopener noreferrer">
+        The British Library
+    </a>
+
+    Flickr page and dug through their Decorative Papers Collection. I was able to create 21 beer, 18 gin, 13 rose, 18 rum and 18 whiskey filters. 
+</p>
+
+<img src="assets/images/art/film_soup_blog/Original.jpg" alt="Original Asteroid Vinyl store front photo" class="bio-image">
+
+<p>
+    The cli Film Soup filter asks for an original image to effect. It then asks for which soup you would like to soak the film in. 
+    Last it asks how long you would like to soak the film fore. Obviously the python script is soaking anything so all its really 
+    asking is what collection of images should be used to blend with and what strength you want the blend to be. 0 means none of 
+    the alcohol image will be used while 100 means a lot of the alcohol image would be used. The program went through the images 
+    pixel by pixel taking the average RGB values of both images and adding them to a new canvas... if you will. THere was some 
+    complicated math to determine the values after "soak time" and I'll admit I had ChatGPT help me work it out.
+</p>
+
+<img src="assets/images/art/film_soup_blog/beer_at_65.jpg" alt="Asteroid Vinyl store front with beer filter" class="bio-image">
+
+<p>
+    Pretty quickly I realized I had a problem. My photo often lost a lot of it's definition when filtered. I had to create a buffer that 
+    checked the brightness of the original images pixel. If it was a dark Pixel the filter would have less of an effect. This buffer 
+    protected the original structure of the photo, even if the "soak time" was maximized.
+</p>
+
+<img src="assets/images/art/film_soup_blog/gin_at_100.jpg" alt="Asteroid Vinyl store front with gin filter" class="bio-image">
+
+<p>
+    Once I had blends I liked it was time to think about the bigger picture... get it? The goal of this project was to create a 
+    lomography filter. Altering one picture in a fairly randomized way was great but I needed to mimic soaking a roll of film in soup. 
+    This wasn't the biggest change to make. the code now would be pointed to a directory / folder of images. It would iterate through 
+    each image one at a time choosing a random alcohol filter to blend with. THis functionally worked great but we have a new problem 
+    to deal with in the future. The program, thanks to my current skill and choice of Python, is very inneficient. This will be a good 
+    chance to learn some new skills but that will come in time. For now I am quite happy.
+</p>
+
+<img src="assets/images/art/film_soup_blog/rose_at_35.jpg" alt="Asteroid Vinyl store front with rose filter" class="bio-image">
+
+<p>
+    I tested the filter on a roll (directory / folder) of several pictures from the Memento camera. This filter looks great on black 
+    and white images but it is an utter disaster on color images. It makes them incomprehensible at worst and ugly at best. Fortunatly 
+    I really love the black and white setting on my camera and I alwats take a few pictures in both color and black and white. On the 
+    other hand getting a rolls worth of photos back with similar but random effects is awesome. doing multiple photos in a batch really 
+    takes the control out of my hands. I get at least a few usable images out of it but its unpredictable nature disincentivizes me from 
+    running the code over and over again. I get what I get and I don't get upset!
+</p>
+<p>
+    Someday I will post the code on github for anyone to view or manipulate. It's by no means a good filter for most people but I will 
+    be using it and It recreates the joy I had anxiously waiting to see what chaos awaited me in the soup.
+</p>
+
+<br><br><br><br><br>
+

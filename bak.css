@@ -1,0 +1,291 @@
+  scrolling within sidebar */
+  box-sizing: border-box; /* Ensure padding is included in height calculation */
+  color: #cec090; /* Ensure text color is consistent */
+}
+
+#sidebar-content {
+  overflow-y: auto;
+}
+
+#bottombar {
+  position: fixed; /* Fixes the element at the bottom of the viewport */
+  bottom: 20px; /* Space from the bottom of the viewport */
+  left: 20px; /* Space from the left edge */
+  right: 20px; /* Space from the right edge */
+  display: flex;
+  justify-content: space-between; /* Center the content */
+  align-items: center;
+  padding: 10px;
+  border: 2px solid #933800;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  position: absolute; /* Fix the buttons at the bottom of the viewport */
+  bottom: 20px; /* Space from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.nav-buttons button {
+  background: transparent; /* Ensure button background is transparent */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Change cursor to pointer */
+  margin: 0 10px; /* Space between buttons */
+  padding: 0; /* Remove default padding */
+}
+
+.nav-buttons img {
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+}
+
+.nav-buttons button:hover img {
+  opacity: 0.7; /* Slightly transparent on hover */
+  cursor: url('./assets/leaf-help.cur'), pointer;
+}
+
+/* Icon Styles */
+.icon {
+  display: flex;
+  width: 60px; /* Adjusted size */
+  height: 60px; /* Adjusted size */
+  margin: 0 10px; /* Space between icons */
+  object-fit: cover;
+  align-items: center;
+}
+
+/* Logo Styling */
+.logo h1 {
+  font-size: 3rem;
+  color: #c09129;
+}
+
+.bio-image {
+  float: right; /* Or use 'right' if you want the image to float on the right side */
+  margin: 15 px;
+  width: 400px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+}
+
+.art-photos {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#audio {
+  /* Other styles if needed */
+}
+
+/* General Reset and Base Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevent scrolling on the body */
+}
+
+body {
+  background-color: #121212;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  cursor: url('./assets/leaf.cur'), auto;
+}
+
+/* Specific body backgrounds */
+body.home {
+  background-image: url('./assets/images/backgrounds/home-bg.jpg');
+}
+body.code {
+  background-image: url('./assets/images/backgrounds/code-bg.jpg');
+}
+body.repair {
+  background-image: url('./assets/images/backgrounds/repair-bg.jpg');
+}
+body.art {
+  background-image: url('./assets/images/backgrounds/art-bg.jpg');
+}
+body.community {
+  background-image: url('./assets/images/backgrounds/community-bg.jpg');
+}
+body.junk {
+  background-image: url('./assets/images/backgrounds/junk-bg.jpg');
+}
+
+/* Font-face declarations */
+@font-face {
+  font-family: 'HellGhost';
+  src: url('./assets/fonts/HellghostRough-Regular(1).ttf');
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('./assets/fonts/HackNerdFontMono-Regular.ttf');
+}
+
+/* Global Typography */
+h1 {
+  font-size: 3rem;
+  margin: 10px;
+  color: #c09129;
+  font-family: 'HellGhost', sans-serif;
+  text-shadow: -5px -5px 5px rgba(0, 0, 0, 1);
+  z-index: 1000;
+  position: relative;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 10px 0;
+  font-family: 'HellGhost', sans-serif;
+  color: #c09129;
+}
+
+h3, h4, h5, h6 {
+  color: #be6411;
+  font-family: 'HellGhost', sans-serif;
+}
+
+p {
+  color: #cec090;
+  font-family: 'Hack', sans-serif;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: url('./assets/leaf-help.cur'), pointer;
+}
+
+a:hover {
+  color: #70807d;
+  text-decoration-color: #70807d;
+  text-decoration: underline;
+}
+
+
+/* NOTE: THIS IS THE STYLING FOR FOLDABLE LISTS FOR BOOKMARKS */
+
+
+
+details {
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+
+summary {
+  color: #c09129;
+  font-size: 1.3rem;
+  font-family: 'HellGhost', sans-serif;
+  cursor: url('./assets/leaf-help.cur'), pointer;
+  font-weight: bold;
+  padding: 10px;
+  list-style: none; /* Removes default arrow */
+}
+
+summary::before {
+  margin-right: 10px;
+  display: inline-block;
+  content: "";
+  background-image: url('./assets/images/icons/arrow-right.png');
+  background-size: 100% 100%;
+  width: 25px;
+  height: 25px;
+  transition: 0.2s;
+}
+
+summary:hover {
+  color: #70807d;
+}
+
+ul li {
+  list-style: none;
+  padding-left: 20px; /* Space for the icon */
+  background: url('./assets/images/icons/bball.png') no-repeat left center;
+  background-size: 16px;
+}
+
+
+
+
+
+/* Layout Containers */
+.container_1 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: calc(100vh - 60px);
+  margin: 0;
+}
+
+.container_2 {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 20px;
+  margin: 20px;
+  padding-bottom: 40px;
+  overflow: hidden; /* Prevent overflow from this container */
+}
+
+/* Box Styling */
+.box {
+  background-color: rgba(18, 14, 13, 0.8);
+  border: 2px solid #933800; /* Border color */
+  border-radius: 10px;
+  padding: 20px; /* Equal padding inside boxes */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Topbar Styling */
+#topbar {
+  display: flex;
+  justify-content: space-between; /* Center the icons */
+  align-items: center;
+  padding: 10px;
+  border: 2px solid #933800;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  top: 0;
+  margin: 20px;
+  width: calc(100% - 60px); /* Ensure it does not stretch to the edges */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Topbar Icon Styling */
+#topbar .icon {
+  width: 60px; /* Adjust size as needed */
+  height: 60px; /* Adjust size as needed */
+  margin: 0 10px;
+}
+
+/* Content and Sidebar */
+#content {
+  position: relative;
+  padding: 20px;
+  width: 70%;
+  overflow-y: auto; /* Enable vertical scrolling within content */
+  box-sizing: border-box; /* Include padding and border in height calculation */
+}
+
+#sidebar {
+  padding: 20px;
+  width: 30%;
+  overflow-y: auto; /* Enable vertical

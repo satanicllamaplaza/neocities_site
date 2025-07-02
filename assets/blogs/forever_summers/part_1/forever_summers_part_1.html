@@ -1,0 +1,156 @@
+<h2>Forever Summers Part 1</h2>
+<h2>02.18.2025</h2>
+
+<p>
+
+  A big focus of my learning journey has been finding easy and inspiring projects to advance my knowledge. 
+  Without a doubt one of my most recomended tools for beginner coders is Pico-8. 
+  Pico-8 is a virtual fantasy consol for developing and playing 8 bit games. It has built in restrictions 
+  to project size, color pallet, and functionality. These restrictions are put in place to limit the users 
+  ability to obses over perfection. No need to be concerned over everydatail because frankly there just 
+  isn't that much detail to concern over.
+  
+</p>
+<p>
+
+  When I discovered Pico-8 I immidiatly dove in head first. I started playing with the sprite editor and 
+  tried to think of a long term concept. After putting together a few cute animal characters I decided to 
+  go with a plot heavy game and landed on this as a story.
+  
+</p>
+<p>
+
+  My game is called Forever Summers. It's an aknowlegement of climate change with a story line of optomism.
+  Our game starts out with a bunny named Bonnie. Bonnie lives in a little solar punk community of critters. 
+  When the game starts you must help Bonnie jump over boulders as she runs home to prepare tohe community for 
+  rain and flooding. Once Bonnie arrives home she sees that most of the rain was blocked and the community 
+  wasn't flooded. She ventures outside of the community to find that a beaver had moved in upstream and built 
+  a danm. 
+  
+</p>
+<p>
+
+  While the beavers danm did block the flood waters it also blocks a lot of the water that the community relies 
+  on. Bonnie explains that the community shares everything and workes together with resources but the beaver is 
+  more interested in making a deal for the water. Bonnie and the rest of the solar punk community give the beaver 
+  resources and continue to invite him into the community despite his hyper individualistic ideals. There are 
+  some issues the community must fix throughout the plot. Their garden needs soil balancing and their power grid 
+  needs modifying. These are mini games that the player will engage with to learn animal facts and companion planting.
+  
+</p>
+<p>
+
+  At the end of the game a fire breaks out in the community and the beaver is forced to decid between taking care 
+  of himself or sacrificing his home to send water down to the community. In the end he realizes his life has 
+  been imensly better because of this community and he doesn't want to struggle alone.
+  
+</p>
+<p>
+
+  Ok thats enough propaganda for one post lets look at the acctual progress I have made with the game. 
+  
+</p>
+<p>
+
+  This whole game is made of of 4ish mini games. Thats where I started. The first game I made was the  
+  garden companion planting game.
+</p>
+
+<a style="color: #486c64;" href="./assets/blogs/forever_summers/part_1/seed_game.html" target="_blank">Companion Planting Game</a>
+
+<p>
+
+  This game functions simple enough.
+  The left and right arrows move you through the soil blocks.
+  The Up and down arrows change the selected seed type in the diologue box.
+  X plants the selected seed in the highlighted soil block.
+  
+</p>
+<p>
+
+  The blocks of soil are colored to indicate if they are balanced or unbalanced.
+  Green soil is balanced.
+  Red soil has a nitrate inbalance.
+  Blue soil has a high Ph level.
+  Yellow soil has a low ph level.
+  
+</p>
+<p>
+
+  The goal of the game is to plant the right seeds to fix the soil and turn the whole garden green.
+  This mini game will be played 3 times and each time the garden will get bigger. 
+  
+</p>
+<p>
+
+  The second game I made was the hacking game. This game will be played whenever the community has a power 
+  grid failure or infrestructure change. To complete this game the player will have to answer some animal 
+  trivia using binary. 
+  
+</p>
+
+<a style="color: #486c64;" href="./assets/blogs/forever_summers/part_1/hack_game.html" target="_blank">Hacking Game</a>
+
+<p>
+
+  The current trivia question will be displayed in the diologue box.
+  Left and right will move the player through binary digets.
+  X will change the highlighted diget from 1 to 0 and vice versa.
+  
+</p>
+<p>
+
+  This game will also be played 3 times and with more questions added each round.
+  
+</p>
+<p>
+
+  The most recent mini game I made was the jumping game. The player helps Bonnie jump over boulders as she runs 
+  through the forest. I am not sure how many times this game will be played. It's a very easy game, press the up 
+  arrow to jump over the boulder. You may note that the collisions are not very good. It's very easy to hit the 
+  boulder without touching the boulder.
+  
+</p>
+
+<a style="color: #486c64;" href="./assets/blogs/forever_summers/part_1/jump_game.html" target="_blank">Jump Game</a>
+
+
+<p>
+
+  One of the biggest learning curves to the jumping game was game state machines. In the other 2 games I didn't really 
+  build in game state machines (I will need to, but it wasn't madatory to building basic functionality). This process 
+  hurt my brain. It was the first time that I had ever thought in such a modular way and it took me a long time to figure out. 
+  There is a cute glitch in this game where if you jump right after clearning the final boulder, Bonnie will get stuck in 
+  the air and levetate off the screen. This would be a game state issue I havent resolved.
+  
+</p>
+<p>
+
+  Another piece of the Pico-8 experience that I have thoroughly enjoyed is the music editor. Pico-8 handles all audio 
+  via sequencers. This makes composing music outside of 4/4 a little cumbersome. Naturally I had to try it. 
+  The first song I wrote... lets call it Triumphant Solidarity, was written in 3/4. It's short and sweet and uses some cool 
+  custom instruments to make percussion. Unfortunatly I did not know that Pico-8 has only 4 audio outputs and I used 
+  them all on this track. This makes adding sound effects for game play rather complicated.
+  
+</p>
+
+<audio controls>
+  <source src="./assets/blogs/forever_summers/part_1/triumphant_solidarity.wav" type="audio/wav">
+  Your browser does not support the audio element.
+</audio>
+
+<p>
+
+  For the second song I learned that lesson and built the song out of 3 tracks of audio, leaving one available 
+  for sound effects. This song... lets call it Quaint Community, was written in 7/8. The end result was a long repeating 
+  melody / rhythm. It's a cozy number that sits well as background music.
+  
+</p>
+
+<audio controls>
+  <source src="./assets/blogs/forever_summers/part_1/quaint_community.wav" type="audio/wav">
+  Your browser does not support the audio element.
+</audio>
+
+<br><br><br><br><br>
+

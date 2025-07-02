@@ -1,0 +1,3 @@
+start preview server:
+
+browser-sync start --server --files '*' 

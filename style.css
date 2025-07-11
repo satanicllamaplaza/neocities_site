@@ -46,6 +46,11 @@ body.junk {
   src: url('./assets/fonts/HackNerdFontMono-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'OpenDys';
+  src: url('./assets/fonts/OpenDyslexic-Regular.woff2');
+}
+
 hr {
   color: #594535;
 }
@@ -76,7 +81,7 @@ h3, h4, h5, h6 {
 
 p {
   color: #cec090;
-  font-family: 'Hack', sans-serif;
+  font-family: 'OpenDys', sans-serif;
 }
 
 /* Links */
@@ -84,6 +89,7 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: url('./assets/leaf-help.cur'), pointer;
+  font-family: 'OpenDys', sans-serif;
 }
 
 a:hover {
@@ -283,8 +289,15 @@ ul > li {
   border-radius: 10px;
 }
 
+.article-image {
+  display: block;
+  margin: auto;
+  width: 600px; /* Adjust the width as needed */
+  border-radius: 10px;
+}
+
 .art-photos {
-  width: 100%;
+  width: 60%;
   border-radius: 10px;
 }
 

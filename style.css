@@ -23,6 +23,9 @@ body.code {
   background-image: url('./assets/images/backgrounds/code-bg.jpg');
 }
 body.repair {
+  background-image: url('./assets/images/backgrounds/junk-bg.jpg');
+}
+body.puzzles {
   background-image: url('./assets/images/backgrounds/repair-bg.jpg');
 }
 body.art {

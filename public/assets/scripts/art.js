@@ -16,7 +16,7 @@ function loadPost(index) {
       return response.text();
     })
     .then(content => {
-      document.getElementById('post-container').innerHTML = content;
+      document.getElementById('content_box').innerHTML = content;
     })
     .catch(error => console.error('Error loading post:', error));
 }
@@ -24,14 +24,14 @@ function loadPost(index) {
 function changePost(direction) {
   // Calculate the new index based on direction
   let newIndex = currentPostIndex + direction;
-  
+
   // Ensure the new index is within bounds
   if (newIndex < 0) {
     newIndex = 0; // Prevent moving before the first post
   } else if (newIndex >= posts.length) {
     newIndex = posts.length - 1; // Prevent moving beyond the last post
   }
-  
+
   // Only update if the new index is different
   if (newIndex !== currentPostIndex) {
     currentPostIndex = newIndex;
@@ -49,8 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+const header = document.createElement('h2');
+header.textContent = 'Art & Photos';
+header.style.textAlign = 'center';
+document.getElementById('side_bar_list').appendChild(header);
+
+
 function populateSidebar() {
-  const titleList = document.getElementById('post-titles'); // Corrected ID
+  const titleList = document.createElement('ul');
+  titleList.classList.add('side_bar_list');
   titleList.innerHTML = ''; // Clear any existing content
   posts.forEach((post, index) => {
     const li = document.createElement('li');
@@ -65,13 +72,13 @@ function populateSidebar() {
     };
     li.appendChild(link);
     titleList.appendChild(li);
+    document.getElementById('side_bar_list').appendChild(titleList);
   });
 }
 
 function updateSidebarHighlight() {
-  const items = document.querySelectorAll('#post-titles li');
+  const items = document.querySelectorAll('#side_bar_list li');
   items.forEach((item, index) => {
-    item.style.backgroundColor = (index === currentPostIndex) ? '#2d2d2d' : ''; // Highlight current post
     item.style.color = (index === currentPostIndex) ? '#c09129' : ''; // Change text color of current post
   });
 }

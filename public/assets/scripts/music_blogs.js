@@ -1,5 +1,6 @@
 let currentPostIndex = 0;
 const posts = [
+  { title: 'New Guitars', path: '../assets/blogs/music/new_guitars.html' },
   { title: 'Ancient Jazz pop', path: '../assets/blogs/music/ancient_jazz_pop.html' },
   // Add more posts here as needed
 ];

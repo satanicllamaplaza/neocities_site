@@ -273,6 +273,12 @@ ul > li {
   background-size: 16px;
 }
 
+ol > li {
+  color: #935463;
+  padding-left: 10px; /* Space for the icon */
+  background-size: 16px;
+}
+
 /* NOTE: MUSIC_PLAYER */
 
 #media_player_text {
